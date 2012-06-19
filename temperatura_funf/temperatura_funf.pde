@@ -23,7 +23,7 @@ void loop(void) {
   }
   // read temperature data from DS18B20
   temperatura = tempSensor.getTemperature();
-  Serial.print(temperatura);
+  Serial.print(round(trunc(temperatura)));
   if (temperatura >= 30) {
     digitalWrite(13, HIGH); 
   } 
@@ -33,6 +33,7 @@ void loop(void) {
   Serial.print("C");
   Serial.println();
 }
+
 
 
 
